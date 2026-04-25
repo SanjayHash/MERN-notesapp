@@ -8,7 +8,8 @@ const NoteList = () => {
 
   const fetchNotes = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/notes");
+      const res = await axios.get("http://13.233.47.200:3000/api/notes");
+
       setNotes(res.data);
     } catch (error) {
       console.error("Error fetching notes:", error);

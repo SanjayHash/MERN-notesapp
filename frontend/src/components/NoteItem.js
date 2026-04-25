@@ -9,7 +9,7 @@ const NoteItem = ({ note, onNoteUpdated, onNoteDeleted }) => {
   // ✅ Update Note
   const handleUpdate = async () => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/notes/${note._id}`, {
+      const res = await axios.put(`http://13.233.47.200:3000/api/notes/${note._id}`, {
         title,
         content,
       });
@@ -25,7 +25,7 @@ const NoteItem = ({ note, onNoteUpdated, onNoteDeleted }) => {
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this note?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/notes/${note._id}`);
+      await axios.delete(`http://13.233.47.200:3000/api/notes/${note._id}`);
       onNoteDeleted(note._id);
     } catch (err) {
       console.error("Error deleting note:", err);

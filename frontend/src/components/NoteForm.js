@@ -14,7 +14,7 @@ const NoteForm = ({ onNoteAdded }) => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/notes", {
+      const res = await axios.post("http://13.233.47.200:3000/api/notes", {
         title,
         content,
       });
